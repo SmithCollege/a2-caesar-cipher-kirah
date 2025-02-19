@@ -31,7 +31,7 @@ public class DynamicArray<T> implements IndexAccess<T> {
             i=i-array.length;
         }
         T[] newArray = (T[]) new Object[array.length];
-        if(offset<0 && offset>=-array.length){
+        if(offset<0 && offset>(-array.length)){
             System.arraycopy(array,0,newArray,-offset,array.length+offset);
             System.arraycopy(array,array.length+offset,newArray,0,-offset);
             return (T) newArray[i];
@@ -41,7 +41,15 @@ public class DynamicArray<T> implements IndexAccess<T> {
             System.arraycopy(array,0,newArray,array.length-offset,offset);
             return (T) newArray[i];
         }else{
-            return (T)"offset is out of range";
+            if(offset>=array.length){
+                offset=offset%array.length;
+                return get(i,offset);
+            }
+            else{
+                offset=(-offset)%array.length;
+                return get(i,-offset);
+            }
+
         }
        
         
@@ -66,6 +74,11 @@ public class DynamicArray<T> implements IndexAccess<T> {
         }
         DynamicArray<Character> alphaTest = new DynamicArray<Character>(0, alphabet);
         System.out.println(alphaTest.get(0, -3));
+        System.out.println(alphaTest.get(-1, -3));
+        System.out.println(alphaTest.get(0, 3));
+        System.out.println(alphaTest.get(0, -29));
+        System.out.println(alphaTest.get(-1, -29));
+        System.out.println(alphaTest.get(0, 29));
     }
 
 }

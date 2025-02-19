@@ -109,6 +109,17 @@ public class CaesarCipher {
         CaesarCipher A = new CaesarCipher(3);
         System.out.println(A.encode("this isn't very secret."));
         System.out.println(A.decode("qefp fpk'q sbov pbzobq."));
+        CaesarCipher B = new CaesarCipher(29);
+        System.out.println(B.encode("this isn't very secret."));
+        System.out.println(B.decode("qefp fpk'q sbov pbzobq."));
+        CaesarCipher C = new CaesarCipher(-3);
+        System.out.println(C.encode("this isn't very secret."));
+        System.out.println(C.decode("qefp fpk'q sbov pbzobq."));
+        CaesarCipher D = new CaesarCipher(-29);
+        System.out.println(D.encode("this isn't very secret."));
+        System.out.println(D.decode("qefp fpk'q sbov pbzobq."));
+
+
         // System.out.println(A.get(0));
     }
 
