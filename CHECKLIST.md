@@ -27,9 +27,9 @@ ___yes__ 2 pts: `CaesarCipher` can encode messages and passes tests
 
 ___yes__ 2 pts: `CaesarCipher` can decode messages and passes tests
 
-_____ 2 pts: At least two encoding tests are provided in `YourTests.java`
+___yes__ 2 pts: At least two encoding tests are provided in `YourTests.java`
 
-_____ 2 pts: At least two decoding tests are provided in `YourTests.java`
+___yes__ 2 pts: At least two decoding tests are provided in `YourTests.java`
 
 _____ KUDOS: Handles capitalization through cleaning the message 
 
@@ -41,7 +41,7 @@ ___yes__ 4 pts: Programs compile without errors or warnings
 
 ___yes__ 2 pts: Executes fully & consistently without crashing (exceptions/freezing)
 
-_____ 2 pt: Complies with style guidelines:
+___yes__ 2 pt: Complies with style guidelines:
 
       _____ Classes & class members all have Javadoc header comments 
 

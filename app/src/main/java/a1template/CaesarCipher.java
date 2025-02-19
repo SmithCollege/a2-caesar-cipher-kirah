@@ -1,6 +1,7 @@
 // Do not change the line below. It lets Gradle find your 
 // Classes to build the project
 package a1template;
+
 import a1template.DynamicArray;
 
 public class CaesarCipher {
@@ -33,16 +34,20 @@ public class CaesarCipher {
         this.cipher = new DynamicArray<>(offset, alphabet);
     }
 
-    // public String toString() {
-    //     for (int i = 0; i < 26; i++) {
-    //         System.out.print(alphabet[i]);
-    //     }
-    //     return alphabet.toString();
-    // }
-
+    /**
+     * Retrieves the encoded character at the specified index.
+     *
+     * This method calls the underlying cipher's {@code get} method with the
+     * negative of the current offset.
+     * The negative offset is used to apply the Caesar cipher transformation in the
+     * encoding direction, thereby returning the encoded character.
+     *
+     * @param index the index of the character to encode
+     * @return the encoded character at the specified index
+     */
     public char get(int index) {
         return cipher.get(index, -offset);
-       
+
     }
 
     /**
@@ -105,22 +110,21 @@ public class CaesarCipher {
         return new String(charArray);
     }
 
-    public static void main(String[] args) {
-        CaesarCipher A = new CaesarCipher(3);
-        System.out.println(A.encode("this isn't very secret."));
-        System.out.println(A.decode("qefp fpk'q sbov pbzobq."));
-        CaesarCipher B = new CaesarCipher(29);
-        System.out.println(B.encode("this isn't very secret."));
-        System.out.println(B.decode("qefp fpk'q sbov pbzobq."));
-        CaesarCipher C = new CaesarCipher(-3);
-        System.out.println(C.encode("this isn't very secret."));
-        System.out.println(C.decode("qefp fpk'q sbov pbzobq."));
-        CaesarCipher D = new CaesarCipher(-29);
-        System.out.println(D.encode("this isn't very secret."));
-        System.out.println(D.decode("qefp fpk'q sbov pbzobq."));
+    // public static void main(String[] args) {
+    // CaesarCipher A = new CaesarCipher(3);
+    // System.out.println(A.encode("this isn't very secret."));
+    // System.out.println(A.decode("qefp fpk'q sbov pbzobq."));
+    // CaesarCipher B = new CaesarCipher(29);
+    // System.out.println(B.encode("this isn't very secret."));
+    // System.out.println(B.decode("qefp fpk'q sbov pbzobq."));
+    // CaesarCipher C = new CaesarCipher(-3);
+    // System.out.println(C.encode("this isn't very secret."));
+    // System.out.println(C.decode("qefp fpk'q sbov pbzobq."));
+    // CaesarCipher D = new CaesarCipher(-29);
+    // System.out.println(D.encode("this isn't very secret."));
+    // System.out.println(D.decode("qefp fpk'q sbov pbzobq."));
 
-
-        // System.out.println(A.get(0));
-    }
+    // // System.out.println(A.get(0));
+    // }
 
 }
