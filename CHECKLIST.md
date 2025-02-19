@@ -53,6 +53,6 @@ ___yes__ 2 pt: Complies with style guidelines:
 
       _____ Methods avoid confusing side effects  
 
-_____ 1 pt: All required files included with submission (including basic readme info and completed checklist file) 
+___yes__ 1 pt: All required files included with submission (including basic readme info and completed checklist file) 
 
-_____ 1 pt: README.md contains answers your reflection on the assignment 
+___yes__ 1 pt: README.md contains answers your reflection on the assignment 
